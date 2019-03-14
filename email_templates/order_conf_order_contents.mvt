@@ -1,0 +1,146 @@
+<mvt:foreach iterator="item" array="order:groups">
+    <table align="left" width="100%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+        <tbody>
+            <tr>
+                <td valign="top" bgcolor="#D8D8D8"><div style="height:1px;"></div></td>
+            </tr>
+        </tbody>
+    </table>
+    <table align="left" width="100%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+        <tbody>
+            <tr>
+                <td valign="top" style="padding: 25px 0;">
+                    <table align="left" width="19%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="margin-bottom: 20px;">
+                        <tbody>
+                            <tr>
+                                <td valign="top" align="left" class="center" width="100%">
+                                    <mvt:if expr="ISNULL l.settings:item:imagetypes:main">
+                                        <mvt:assign name="l.settings:item:imagetypes:main" value="'themes/shadows/ui/placeholders/ctgy-no-part.jpg'" />
+                                    </mvt:if>
+                                    <img src="&mvte:item:imagetypes:main;" border="0" style="height: 70px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="left" class="center" style="font-family: Arial, Times, sans-serif; font-size: 13px; color: #777777; padding-top:20px;">
+                                    Quantity: &mvte:item:quantity;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="right" width="79%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <table align="left" width="79%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="font-size: 13px; color: #9E9E9E; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: uppercase;">
+                                                    SKU#: &mvt:item:product:sku;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" style="font-size: 13px; color: #080808; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px; text-transform: uppercase;">
+                                                       &mvt:item:name; 
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" style="text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; padding-bottom: 35px;">
+                                    <table align="left" width="69%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                           <tbody>
+                                               <tr>
+                                                   <td valign="top" style="color: #5E5F60; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px;">
+                                                      Unit
+                                                  </td>
+                                               </tr>
+                                           </tbody>
+                                   </table>
+                                   <table align="right" width="29%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                       <tbody>
+                                           <tr>
+                                               <td valign="top" style="font-size: 13px; color: #9E9E9E; font-weight: bold; text-align: right; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: uppercase;">
+                                                   &mvte:item:formatted_base_price;
+                                               </td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                                </td>
+                            </tr>
+                            <mvt:if expr="l.settings:item:options">
+                                <mvt:foreach iterator="option" array="item:options">
+                                    <mvt:if expr="l.settings:option:price EQ 0">
+                                        <tr>
+                                            <td valign="top" style="font-size: 13px; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px; padding-bottom: 5px;">
+                                                <table align="left" width="100%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                                       <tbody>
+                                                           <tr>
+                                                               <td valign="top" style="color: #9E9E9E; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: uppercase;">
+                                                                  &mvt:option:attr_prompt;
+
+                                                                   <span style="color: #222222; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px; text-transform: normal; padding-left: 10px;">
+                                                                      &mvt:option:data;
+                                                                  </span>
+                                                              </td>
+                                                           </tr>
+                                                       </tbody>
+                                               </table>
+                                            </td>
+                                        </tr>
+                                    <mvt:else>
+                                        <tr>
+                                            <td valign="top" style="font-size: 13px; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px; padding-bottom:35px;">
+                                                <table align="left" width="79%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                                       <tbody>
+                                                           <tr>
+                                                               <td valign="top" style="color: #222222; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px;">
+                                                                  &mvt:option:attr_prompt;
+                                                              </td>
+                                                           </tr>
+                                                           <tr>
+                                                                <td valign="top" style="color: #222222; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal;">
+                                                                   &mvt:item:sku;
+                                                               </td>
+                                                           </tr>
+                                                           <tr>
+                                                                <td valign="top" style="color: #9E9E9E; font-weight: bold; text-align: left; font-family: Arial, Times, sans-serif; line-height: 15px; text-transform: normal;">
+                                                                   &mvt:option:data;
+                                                               </td>
+                                                           </tr>
+                                                       </tbody>
+                                               </table>
+                                               <table align="right" width="19%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                                   <tbody>
+                                                        <tr>
+                                                            <td valign="top" style="line-height: 15px;">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td valign="top" style="line-height: 24px;">&nbsp;</td>
+                                                        </tr>
+                                                       <tr>
+                                                           <td valign="top" style="font-size: 13px; color: #9E9E9E; font-weight: bold; text-align: right; font-family: Arial, Times, sans-serif; line-height: 15px; text-transform: uppercase;">
+                                                               &mvte:option:formatted_price;
+                                                           </td>
+                                                       </tr>
+                                                   </tbody>
+                                               </table>
+                                            </td>
+                                        </tr>
+                                    </mvt:if>
+                                </mvt:foreach>
+                            </mvt:if>
+                            <tr>
+                                <td valign="top" style="color: #080808; font-size: 13px; font-weight: bold; text-align: right; font-family: Arial, Times, sans-serif; line-height: 24px;">
+                                    &mvte:item:formatted_subtotal_comprehensive;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mvt:foreach>
+
