@@ -16,11 +16,18 @@
     <meta name="format-detection" content="address=no" />
     <meta name="format-detection" content="telephone=no" />
     <title>Email Template</title>
+    <link type="text/css" media="all" rel="stylesheet" href="themes/shadows/ui/fonts/style.css">
 
     <style type="text/css">
     	.ReadMsgBody {width: 100%; background-color: #ffffff;}
     	.ExternalClass {width: 100%; background-color: #ffffff;}
-    	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Arial Black, Times, sans-serif}
+
+        /* latin-ext */
+        @font-face {
+          font-family: 'Archivo Black';font-style: normal;font-weight: 400;src: local('Archivo Black Regular'), local('ArchivoBlack-Regular'), url(https://fonts.gstatic.com/s/archivoblack/v8/HTxqL289NzCGg4MzN6KJ7eW6CYKF_jzx13HOvQ.woff2) format('woff2');unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+        /* latin */
+        @font-face {font-family: 'Archivo Black';font-style: normal;font-weight: 400;src: local('Archivo Black Regular'), local('ArchivoBlack-Regular'), url(https://fonts.gstatic.com/s/archivoblack/v8/HTxqL289NzCGg4MzN6KJ7eW6CYyF_jzx13E.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+    	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Arial Black, 'Archivo Black', Roboto Arial, sans-serif}
     	table {border-collapse: collapse;}
 
     	@media only screen and (max-width: 640px)  {
@@ -41,28 +48,28 @@
 
 </head>
 
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-family: Arial Black, Times, sans-serif">
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-family: Arial Black, 'Archivo Black', Roboto, Arial, sans-serif">
 
 <!-- Wrapper -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
     <!-- Start Header-->
 	<tr>
-		<td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
+		<td valign="top" width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
 			<table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" style="margin:0 auto;">
 				<tr>
-					<td width="100%" bgcolor="#141414">
+					<td valign="top" width="100%" bgcolor="#141414">
                         <!-- Logo -->
                         <table border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
                             <tbody>
                                 <tr>
-                                    <td style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;" class="center">
+                                    <td valign="top" style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;" class="center">
                                         <mvt:if expr="l.settings:readytheme:logo_type EQ 'text'">
-                                            <div class="h3" style="color:#ffffff; font-family:Arial Black, sans-serif; min-width:auto !important; font-size:24px; line-height:28px; text-align:center"><strong>&mvt:readytheme:logo_name;</strong>
-                                            </div>
-                                            <div class="h4" style="color:#7a838d; font-family:Arial Black, sans-serif; min-width:auto !important; font-size:16px; line-height:20px; text-align:center"><strong>&mvt:readytheme:logo_tagline;</strong>
-                                            </div>
+                                            <span class="h3" style="color:#ffffff; font-weight: bold; font-family:Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; min-width:auto !important; font-size:24px; line-height:28px; text-align:center"><strong>&mvt:readytheme:logo_name;</strong>
+                                            </span>
+                                            <span class="h4" style="color:#7a838d; font-weight: bold; font-family:Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; min-width:auto !important; font-size:16px; line-height:20px; text-align:center"><strong>&mvt:readytheme:logo_tagline;</strong>
+                                            </span>
                                         <mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'">
-                                            <a href="&mvte:urls:SFNT:auto;" target="_blank"><img style="max-width: 185px; height: auto;" src="&mvte:global:domain:base_url;&mvte:readytheme:logo_image;" border="0" alt="&mvt:readytheme:logo_name;" /></a>
+                                            <a href="&mvte:urls:SFNT:auto;" target="_blank"><img width="185" style="max-width: 185px; height: auto;" src="&mvte:global:domain:base_url;&mvte:readytheme:logo_image;" border="0" alt="&mvt:readytheme:logo_name;" /></a>
                                         </mvt:if>
                                     </td>
                                 </tr>
@@ -85,17 +92,17 @@
                             <table width="545" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#eeeeed" style="margin:0 auto;">
                                 <tbody>
                                     <tr>
-                                        <td style="font-size: 25px; color: #3B3B3B; font-weight: bold; text-align: center; font-family: Arial Black, Times, sans-serif; line-height: 32px; vertical-align: top; text-transform: uppercase; padding-top: 30px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px;" bgcolor="#eeeeed">
+                                        <td valign="top" style="font-size: 25px; color: #3B3B3B; font-weight: bold; text-align: center; font-family: Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; line-height: 32px; text-transform: uppercase; padding-top: 30px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px;" bgcolor="#eeeeed">
                                             Thank you for your order, &mvt:order:bill_fname;!
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="font-size: 17px; color: #451AF7; font-weight: bold; text-align: center; font-family: Arial Black, Times, sans-serif; line-height: 24px; vertical-align: top; text-transform: uppercase;" bgcolor="#eeeeed">
+                                        <td valign="top" style="font-size: 17px; color: #451AF7; font-weight: bold; text-align: center; font-family: Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; line-height: 24px; text-transform: uppercase;" bgcolor="#eeeeed">
                                             &mvt:order:id;
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="font-size: 13px; color: #707070; font-weight: bold; text-align: center; text-transform: uppercase; font-family: Arial, Times, sans-serif; line-height: 15px; vertical-align: top; padding: 15px;" bgcolor="#eeeeed">
+                                        <td valign="top" style="font-size: 13px; color: #707070; font-weight: bold; text-align: center; text-transform: uppercase; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 15px; padding: 15px;" bgcolor="#eeeeed">
                                             Your Order Reference Number
                                         </td>
                                     </tr>
@@ -114,10 +121,10 @@
                                             <table width="450" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#ffffff" style="margin:0 auto;">
                                                 <tbody>
                                                     <tr>
-                                                        <td valign="top" align="left" class="left" style="padding-top:30px; padding-bottom: 20px;">
+                                                        <td valign="top" align="left" class="left" style="color:#222222; text-align: left; font-weight: bold; font-family:Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase; padding-top:30px; padding-bottom: 20px;">
                                                             <mvt:foreach iterator="charge" array="order:charges">
                                                                 <mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
-                                                                    <div style="color:#222222; text-align: left; font-family:Arial Black, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase;">&mvt:charge:descrip;</div>
+                                                                    &mvt:charge:descrip;
                                                                 </mvt:if>
                                                             </mvt:foreach>
                                                         </td>
@@ -149,7 +156,7 @@
                                             <table width="450" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#ffffff" style="margin:0 auto;">
                                                 <tbody>
                                                     <tr>
-                                                        <td valign="top" align="left" class="left" style="color:#222222; text-align: left; font-family:Arial Black, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase; padding-top:30px; padding-bottom: 20px;">
+                                                        <td valign="top" align="left" class="left" style="color:#222222; text-align: left; font-weight: bold; font-family: Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase; padding-top:30px; padding-bottom: 20px;">
                                                             Order Details
                                                         </td>
                                                     </tr>
@@ -161,12 +168,12 @@
                                                             <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                 <tbody>
                                                                     <tr>
-                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                            Order Number
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; font-size: 13px;  text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; font-size: 13px;  text-transform: normal;">
                                                                            &mvt:order:id;
                                                                        </td>
                                                                     </tr>
@@ -175,12 +182,12 @@
                                                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                 <tbody>
                                                                     <tr>
-                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                            Order Date
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; font-size: 13px;  text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; font-size: 13px;  text-transform: normal;">
                                                                           &mvte:order:date;
                                                                        </td>
                                                                     </tr>
@@ -193,12 +200,12 @@
                                                             <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                 <tbody>
                                                                     <tr>
-                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                            Payment
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                 <mvt:foreach iterator="payment" array="order:payments">
                                                                                     &mvte:payment:desc;
                                                                                 </mvt:foreach>
@@ -214,12 +221,12 @@
                                                                 <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                      <tbody>
                                                                          <tr>
-                                                                            <td valign="top" style="color:#222222; text-align: left; font-size: 13px; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                            <td valign="top" style="color:#222222; text-align: left; font-size: 13px; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                                 Delivery Instructions
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                &mvte:order:customfields:order_notes:order_notes;
                                                                             </td>
                                                                          </tr>
@@ -236,32 +243,32 @@
                                                             <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                 <tbody>
                                                                     <tr>
-                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                       <td valign="top" style="color:#222222; text-align: left; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                            Billing Address
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                             &mvte:order:bill_fname; &mvte:order:bill_lname;
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                             &mvte:order:bill_email;
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                             &mvte:order:bill_phone;
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                             &mvte:order:bill_addr;
                                                                        </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                        <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                             &mvte:order:bill_city;, &mvte:order:bill_state; &mvte:order:bill_zip;
                                                                        </td>
                                                                     </tr>
@@ -275,38 +282,38 @@
                                                                 <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                                                                      <tbody>
                                                                          <tr>
-                                                                            <td valign="top" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                            <td valign="top" style="color:#222222; text-align: left; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                                 Shipping Address
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                  &mvte:order:ship_fname; &mvte:order:ship_lname;
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                  &mvte:order:ship_email;
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                  &mvte:order:ship_phone;
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                  &mvte:order:ship_addr;
                                                                             </td>
                                                                          </tr>
                                                                          <tr>
-                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                             <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                  &mvte:order:ship_city;, &mvte:order:ship_state; &mvte:order:ship_zip;
                                                                             </td>
                                                                          </tr>
                                                                          <mvt:if expr="l.settings:order:ship_res">
                                                                              <tr>
-                                                                                 <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Times, sans-serif; line-height: 24px; text-transform: normal; vertical-align: top;">
+                                                                                 <td valign="top" style="color: #777777; font-size: 13px; font-weight: normal; text-align: left; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; text-transform: normal;">
                                                                                      Residential Address
                                                                                 </td>
                                                                              </tr>
@@ -338,7 +345,7 @@
                                             <table width="450" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#ffffff" style="margin:0 auto;">
                                                 <tbody>
                                                     <tr>
-                                                        <td valign="top" align="left" class="left" style="color:#222222; text-align: left; font-family: Arial Black, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase; padding-top: 30px; padding-bottom: 20px;">
+                                                        <td valign="top" align="left" class="left" style="color:#222222; font-weight: bold;  font-family: Arial Black, 'Archivo Black', Roboto, Arial, Helvetica, sans-serif; min-width:auto !important; font-size:15px; line-height:24px; text-align:left; text-transform: uppercase; padding-top: 30px; padding-bottom: 20px;">
                                                             Order Summary
                                                         </td>
                                                     </tr>
@@ -350,7 +357,7 @@
                                                             <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
                                                                 <tbody>
                                                                     <tr>
-                                                                       <td valign="center" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                       <td valign="center" style="color:#222222; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
                                                                            Subtotal
                                                                        </td>
                                                                     </tr>
@@ -359,7 +366,7 @@
                                                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td valign="center" style="color: #777777; font-weight: bold; text-align: right; font-family: Arial, Times, sans-serif; line-height: 24px; font-size: 17px;  text-transform: normal; vertical-align: top;">
+                                                                        <td valign="center" style="color: #777777; font-weight: bold; text-align: right; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; font-size: 17px;  text-transform: normal;">
                                                                           &mvte:order:formatted_subtotal;
                                                                        </td>
                                                                     </tr>
@@ -367,34 +374,57 @@
                                                            </table>
                                                         </td>
                                                     </tr>
+                                                    <tr>
+                                                        <td valign="top" bgcolor="#D8D8D8"><div style="height:1px"></div></td>
+                                                    </tr>
                                                     <mvt:foreach iterator="charge" array="order:charges">
-                                                            <mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
-                                                            <div class="text-1" style="color:#7a838d; font-family:Arial, sans-serif; min-width:auto !important; font-size:16px; line-height:24px; text-align:left">&mvt:charge:descrip;</div>
-
-                                                            <mvt:assign name="l.settings:shipping_method_found" value="1" />
-                                                        </mvt:if>
+                                                        <tr>
+                                                            <td valign="top" align="left" class="left" style="padding-top:20px; padding-bottom: 20px;">
+                                                                <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="center" style="color:#222222; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                                &mvte:charge:descrip;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="center" style="color: #777777; font-weight: bold; text-align: right; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; font-size: 17px;  text-transform: normal;">
+                                                                                &mvte:charge:formatted_disp_amt;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                             </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td valign="top" bgcolor="#D8D8D8"><div style="height:1px"></div></td>
+                                                        </tr>
                                                     </mvt:foreach>
                                                     <tr>
-                                                       <td valign="top" align="left" class="left" style="padding-top:20px; padding-bottom: 20px;">
+                                                        <td valign="top" align="left" class="left" style="padding-top:20px; padding-bottom: 20px;">
                                                             <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
                                                                 <tbody>
-                                                                    <tr>
-                                                                       <td valign="center" style="color:#222222; text-align: left; font-family:Arial, sans-serif; min-width:auto !important; font-size: 13px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
-                                                                           Sales Tax
-                                                                       </td>
+                                                                    <tr
+                                                                        <td valign="center" style="color: #000000; font-family:Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 20px; line-height:24px; text-align:left; text-transform: uppercase; font-weight: bold;">
+                                                                            TOTAL
+                                                                        </td>
                                                                     </tr>
                                                                 </tbody>
-                                                           </table>
-                                                           <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
+                                                            </table>
+                                                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" style="width: 49% !important;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td valign="center" style="color: #777777; font-weight: bold; text-align: right; font-family: Arial, Times, sans-serif; line-height: 24px; font-size: 17px;  text-transform: normal; vertical-align: top;">
-                                                                          &mvte:order:formatted_sales_tax;
-                                                                       </td>
+                                                                        <td valign="center" style="color: #000000; font-weight: bold; text-align: right; font-size: 20px; font-family: Arial, Roboto, Helvetica, sans-serif; line-height: 24px; font-size: 17px;  text-transform: normal;">
+                                                                            &mvte:order:formatted_total;
+                                                                        </td>
                                                                     </tr>
                                                                 </tbody>
-                                                           </table>
-                                                        </td>
+                                                            </table>
+                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -417,11 +447,90 @@
     <tr>
         <td width="100%" valign="top" bgcolor="#ffffff">
             <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" style="margin:0 auto; color: #ffffff;" bgcolor="#111111">
-                <tr>
-                    <td valign="top">
-                        details details
-                    </td>
-                </tr>
+               <tbody>
+                   <tr>
+                       <td>
+                           <table width="450" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#111111" style="margin:0 auto;">
+                               <tbody>
+                                   <tr>
+                                       <td valign="top" style="color: #ffffff; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 20px; line-height:35px; text-transform: uppercase; font-weight: bold; padding-top: 35px;">
+                                           We're here to help
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td valign="top" style="color: #ffffff; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 15px; line-height:24px; font-weight: normal;">
+                                           Your satisfaction is important to us! Call or <a href="mailto:&mvte:store:email;" style="color: #ffffff;">email us</a>  your questions about products, online orders, store experiences and more.
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td valign="top">
+                                           <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#111111" style="margin:0 auto;">
+                                               <tbody>
+                                                   <tr>
+                                                       <td valign="top">
+                                                           <table width="49%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="center" style="color: #8B8B8B; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 15px; line-height:24px; font-weight: bold;">
+                                                                           <table width="49%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center; width: 49% !important;">
+                                                                               <tbody>
+                                                                                   <tr>
+                                                                                       <td valign="center">
+                                                                                           <i class="dppicons--call" style="font-size: 20px; padding-right: 10px;"></i>
+                                                                                       </td>
+                                                                                   </tr>
+                                                                               </tbody>
+                                                                           </table>
+                                                                           <table width="49%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center; width: 49% !important;">
+                                                                               <tbody>
+                                                                                   <tr>
+                                                                                       <td valign="center" style="color: #8B8B8B; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 15px; line-height:24px; font-weight: bold; text-transform: uppercase;">
+                                                                                           &mvte:store:phone;
+                                                                                       </td>
+                                                                                   </tr>
+                                                                               </tbody>
+                                                                           </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table width="49%" border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center;">
+                                                                 <tbody>
+                                                                    <tr>
+                                                                        <td valign="center" style="color: #8B8B8B; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 15px; line-height:24px; font-weight: bold;">
+                                                                           <table width="49%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center; width: 49% !important;">
+                                                                               <tbody>
+                                                                                   <tr>
+                                                                                       <td valign="center">
+                                                                                           <i class="dppicons--email" style="font-size: 16px; padding-right: 10px;"></i>
+                                                                                       </td>
+                                                                                   </tr>
+                                                                               </tbody>
+                                                                           </table>
+                                                                           <table width="49%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" bgcolor="#111111" style="margin:0; text-align: center; width: 49% !important;">
+                                                                               <tbody>
+                                                                                   <tr>
+                                                                                       <td valign="center" style="color: #8B8B8B; text-align: center; font-family: Arial, Roboto, Helvetica, sans-serif; min-width:auto !important; font-size: 15px; line-height:24px; font-weight: bold; text-transform: uppercase;">
+                                                                                           <a href="mailto:&mvte:store:email;" style="color: #8B8B8B;">EMAIL US</a>
+                                                                                       </td>
+                                                                                   </tr>
+                                                                               </tbody>
+                                                                           </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                 </tbody>
+                                                            </table>
+                                                       </td>
+                                                   </tr>
+                                               </tbody>
+                                           </table>
+                                       </td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                       </td>
+                   </tr>
+               </tbody>
             </table>
         </td>
     </tr>
